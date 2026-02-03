@@ -165,3 +165,36 @@ html {
     animation: none;
   }
 }
+
+@keyframes ai-dot-pulse {
+  0%, 80%, 100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.ai-loading-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.ai-loading-dots span {
+  width: 0.36rem;
+  height: 0.36rem;
+  border-radius: 9999px;
+  background: #64748b;
+  animation: ai-dot-pulse 0.95s infinite ease-in-out;
+}
+
+.ai-loading-dots span:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.ai-loading-dots span:nth-child(3) {
+  animation-delay: 0.24s;
+}
