@@ -61,7 +61,8 @@ const PROMPT_SCENARIOS = [
     botIconClass: "text-emerald-700",
     changeCardClass: "bg-white border-emerald-100",
     primaryButtonClass: "bg-emerald-500 text-white hover:bg-emerald-600",
-    secondaryButtonClass: "bg-emerald-100 text-emerald-700 hover:bg-emerald-200",
+    secondaryButtonClass:
+      "bg-emerald-100 text-emerald-700 hover:bg-emerald-200",
     primaryAction: "再配分を実行",
   },
 ];
@@ -87,7 +88,9 @@ export default function NaturalLanguageInput() {
       }
     };
 
-    const typewriterPrompts = PROMPT_SCENARIOS.map((scenario) => scenario.prompt);
+    const typewriterPrompts = PROMPT_SCENARIOS.map(
+      (scenario) => scenario.prompt,
+    );
     typeTargetRef.current.textContent = "";
 
     const typeIt = new TypeIt(typeTargetRef.current, {
@@ -106,7 +109,9 @@ export default function NaturalLanguageInput() {
         setIsOutputVisible(false);
       },
       afterString: (prompt: string) => {
-        const scenarioIndex = PROMPT_SCENARIOS.findIndex((scenario) => scenario.prompt === prompt);
+        const scenarioIndex = PROMPT_SCENARIOS.findIndex(
+          (scenario) => scenario.prompt === prompt,
+        );
         if (scenarioIndex < 0) {
           return;
         }
@@ -143,10 +148,10 @@ export default function NaturalLanguageInput() {
       <div className="p-6 space-y-4">
         {/* Input field */}
         <div className="relative">
-          <Sparkles className="w-4 h-4 text-sky-500 absolute left-4 top-1/2 -translate-y-1/2" />
+          {/*<Sparkles className="w-4 h-4 text-sky-500 absolute left-4 top-1/2 -translate-y-1/2" />*/}
           <div
             aria-label="AIへの指示入力"
-            className="w-full pl-10 pr-16 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900"
+            className="w-full pl-3 pr-16 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900"
           >
             <span ref={typeTargetRef} className="text-slate-900" />
           </div>
@@ -159,8 +164,8 @@ export default function NaturalLanguageInput() {
           {isLoadingOutput
             ? "AIが提案を作成しています..."
             : isOutputVisible
-            ? `AI提案を更新しました（${displayedScenario.statusLabel}）`
-            : "AIが入力内容を解析しています..."}
+              ? `AI提案を更新しました（${displayedScenario.statusLabel}）`
+              : "AIが入力内容を解析しています..."}
         </p>
 
         <div className="flex flex-wrap gap-2">
@@ -187,7 +192,9 @@ export default function NaturalLanguageInput() {
           }`}
         >
           <div className="flex items-start gap-3">
-            <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${displayedScenario.botBadgeClass}`}>
+            <div
+              className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${displayedScenario.botBadgeClass}`}
+            >
               <div className="w-6 h-6 rounded-md overflow-hidden bg-white/90 ring-1 ring-white/80 shadow-sm">
                 <Image
                   src="/images/chatbot.gif"
@@ -202,7 +209,9 @@ export default function NaturalLanguageInput() {
             <div className="flex-1">
               <div className="flex items-center gap-2">
                 <span className="font-medium text-slate-900">AdPilot AI</span>
-                <Sparkles className={`w-3 h-3 ${displayedScenario.botIconClass}`} />
+                <Sparkles
+                  className={`w-3 h-3 ${displayedScenario.botIconClass}`}
+                />
               </div>
 
               <div className="relative min-h-[158px] mt-3">
@@ -237,25 +246,39 @@ export default function NaturalLanguageInput() {
                   </p>
 
                   {/* Change preview */}
-                  <div className={`${displayedScenario.changeCardClass} rounded-lg p-3 border space-y-2`}>
+                  <div
+                    className={`${displayedScenario.changeCardClass} rounded-lg p-3 border space-y-2`}
+                  >
                     <div className="flex justify-between text-sm">
-                      <span className="text-slate-500">{displayedScenario.changeLabel}</span>
+                      <span className="text-slate-500">
+                        {displayedScenario.changeLabel}
+                      </span>
                       <span className="font-medium text-slate-900">
                         {displayedScenario.changeValue}
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-slate-500">{displayedScenario.impactLabel}</span>
-                      <span className={`font-medium ${displayedScenario.impactToneClass}`}>{displayedScenario.impactValue}</span>
+                      <span className="text-slate-500">
+                        {displayedScenario.impactLabel}
+                      </span>
+                      <span
+                        className={`font-medium ${displayedScenario.impactToneClass}`}
+                      >
+                        {displayedScenario.impactValue}
+                      </span>
                     </div>
                   </div>
 
                   {/* Action buttons */}
                   <div className="flex gap-2 mt-4">
-                    <button className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${displayedScenario.primaryButtonClass}`}>
+                    <button
+                      className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${displayedScenario.primaryButtonClass}`}
+                    >
                       {displayedScenario.primaryAction}
                     </button>
-                    <button className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${displayedScenario.secondaryButtonClass}`}>
+                    <button
+                      className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${displayedScenario.secondaryButtonClass}`}
+                    >
                       キャンセル
                     </button>
                   </div>

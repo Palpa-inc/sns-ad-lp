@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative overflow-hidden lg:min-h-screen lg:flex lg:items-center">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
@@ -74,26 +74,28 @@ export default function Hero() {
           {/* Right: MockUI Preview */}
           {/* Mobile: Marquee infinite scroll */}
           <div className="lg:hidden -mx-4 pb-8 overflow-hidden">
-            <div className="flex items-center animate-marquee gap-8">
-              {/* First set */}
-              <div className="flex-shrink-0 w-[95vw]">
-                <Dashboard />
-              </div>
-              <div className="flex-shrink-0 w-[88vw]">
-                <SlackNotification />
-              </div>
-              <div className="flex-shrink-0 w-[88vw]">
-                <NaturalLanguageInput />
-              </div>
-              {/* Duplicate set for seamless loop */}
-              <div className="flex-shrink-0 w-[95vw]">
-                <Dashboard />
-              </div>
-              <div className="flex-shrink-0 w-[88vw]">
-                <SlackNotification />
-              </div>
-              <div className="flex-shrink-0 w-[88vw]">
-                <NaturalLanguageInput />
+            <div className="h-[520px]">
+              <div className="h-full flex items-start animate-marquee gap-6 px-4">
+                {/* First set */}
+                <div className="flex-shrink-0 w-[84vw] max-w-[340px] origin-top scale-[0.92]">
+                  <Dashboard />
+                </div>
+                <div className="flex-shrink-0 w-[84vw] max-w-[340px] origin-top scale-[0.92]">
+                  <SlackNotification />
+                </div>
+                <div className="flex-shrink-0 w-[84vw] max-w-[340px] origin-top scale-[0.92]">
+                  <NaturalLanguageInput />
+                </div>
+                {/* Duplicate set for seamless loop */}
+                <div className="flex-shrink-0 w-[84vw] max-w-[340px] origin-top scale-[0.92]">
+                  <Dashboard />
+                </div>
+                <div className="flex-shrink-0 w-[84vw] max-w-[340px] origin-top scale-[0.92]">
+                  <SlackNotification />
+                </div>
+                <div className="flex-shrink-0 w-[84vw] max-w-[340px] origin-top scale-[0.92]">
+                  <NaturalLanguageInput />
+                </div>
               </div>
             </div>
           </div>
