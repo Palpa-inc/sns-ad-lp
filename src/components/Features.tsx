@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Check, Clock, PiggyBank, Zap } from "lucide-react";
 
 const features = [
@@ -11,6 +12,7 @@ const features = [
     stat: "最大85%",
     statLabel: "コスト削減",
     color: "sky",
+    image: "/images/feature-cost.png",
   },
   {
     icon: Zap,
@@ -20,6 +22,7 @@ const features = [
     stat: "数分",
     statLabel: "検知から通知まで",
     color: "amber",
+    image: "/images/feature-alert.png",
   },
   {
     icon: Clock,
@@ -29,6 +32,7 @@ const features = [
     stat: "週15時間→2時間",
     statLabel: "作業時間削減",
     color: "emerald",
+    image: "/images/feature-time.png",
   },
 ];
 
@@ -81,46 +85,60 @@ export default function Features() {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-8 mb-20 items-stretch">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+              className="relative bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow h-full overflow-hidden"
             >
-              <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                  feature.color === "sky"
-                    ? "bg-sky-100"
-                    : feature.color === "amber"
-                    ? "bg-amber-100"
-                    : "bg-emerald-100"
-                }`}
-              >
-                <feature.icon
-                  className={`w-7 h-7 ${
-                    feature.color === "sky"
-                      ? "text-sky-600"
-                      : feature.color === "amber"
-                      ? "text-amber-600"
-                      : "text-emerald-600"
-                  }`}
+              {/* 背景画像 */}
+              <div className="absolute inset-0">
+                <Image
+                  src={feature.image}
+                  alt=""
+                  fill
+                  className="object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-slate-600 mb-6">{feature.description}</p>
-              <div
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${
-                  feature.color === "sky"
-                    ? "bg-sky-50 text-sky-700"
-                    : feature.color === "amber"
-                    ? "bg-amber-50 text-amber-700"
-                    : "bg-emerald-50 text-emerald-700"
-                }`}
-              >
-                <span className="text-lg">{feature.stat}</span>
-                <span className="font-normal">{feature.statLabel}</span>
+              {/* オーバーレイ */}
+              <div className="absolute inset-0 bg-white/80" />
+              {/* コンテンツ */}
+              <div className="relative z-10 h-full flex flex-col">
+                <div
+                  className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
+                    feature.color === "sky"
+                      ? "bg-sky-100"
+                      : feature.color === "amber"
+                      ? "bg-amber-100"
+                      : "bg-emerald-100"
+                  }`}
+                >
+                  <feature.icon
+                    className={`w-7 h-7 ${
+                      feature.color === "sky"
+                        ? "text-sky-600"
+                        : feature.color === "amber"
+                        ? "text-amber-600"
+                        : "text-emerald-600"
+                    }`}
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[56px] flex items-center">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-600 mb-6 flex-1">{feature.description}</p>
+                <div
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold w-fit ${
+                    feature.color === "sky"
+                      ? "bg-sky-50 text-sky-700"
+                      : feature.color === "amber"
+                      ? "bg-amber-50 text-amber-700"
+                      : "bg-emerald-50 text-emerald-700"
+                  }`}
+                >
+                  <span className="text-lg">{feature.stat}</span>
+                  <span className="font-normal">{feature.statLabel}</span>
+                </div>
               </div>
             </div>
           ))}

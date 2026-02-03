@@ -1,6 +1,9 @@
 "use client";
 
-import { ChevronRight, BarChart3, Bell, MessageSquare } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import Dashboard from "./MockUI/Dashboard";
+import SlackNotification from "./MockUI/SlackNotification";
+import NaturalLanguageInput from "./MockUI/NaturalLanguageInput";
 
 export default function Hero() {
   const scrollToForm = () => {
@@ -20,7 +23,7 @@ export default function Hero() {
       />
       {/* Gradient Overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/75 via-white/50 to-white/30" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 sm:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Copy */}
           <div className="space-y-8">
@@ -88,114 +91,63 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: Dashboard Preview */}
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl shadow-slate-200/50 border border-slate-200 p-6 space-y-4">
-              {/* Header */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900">AdPilot AI</h3>
-                    <p className="text-sm text-slate-500">ダッシュボード</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  <span className="text-sm text-emerald-600 font-medium">
-                    監視中
-                  </span>
-                </div>
+          {/* Right: MockUI Preview */}
+          {/* Mobile: Marquee infinite scroll */}
+          <div className="lg:hidden -mx-4 pb-8 overflow-hidden">
+            <div className="flex items-center animate-marquee gap-8">
+              {/* First set */}
+              <div className="flex-shrink-0 w-[95vw]">
+                <Dashboard />
               </div>
+              <div className="flex-shrink-0 w-[88vw]">
+                <SlackNotification />
+              </div>
+              <div className="flex-shrink-0 w-[88vw]">
+                <NaturalLanguageInput />
+              </div>
+              {/* Duplicate set for seamless loop */}
+              <div className="flex-shrink-0 w-[95vw]">
+                <Dashboard />
+              </div>
+              <div className="flex-shrink-0 w-[88vw]">
+                <SlackNotification />
+              </div>
+              <div className="flex-shrink-0 w-[88vw]">
+                <NaturalLanguageInput />
+              </div>
+            </div>
+          </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-slate-50 rounded-xl p-4">
-                  <p className="text-sm text-slate-500">今週のCPA</p>
-                  <p className="text-2xl font-bold text-slate-900 tabular-nums">
-                    ¥2,340
-                  </p>
-                  <p className="text-sm text-emerald-600 flex items-center gap-1">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                      />
-                    </svg>
-                    前週比 -12%
-                  </p>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-4">
-                  <p className="text-sm text-slate-500">ROAS</p>
-                  <p className="text-2xl font-bold text-slate-900 tabular-nums">
-                    4.2x
-                  </p>
-                  <p className="text-sm text-emerald-600 flex items-center gap-1">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                      />
-                    </svg>
-                    前週比 +8%
-                  </p>
-                </div>
-              </div>
+          {/* Desktop: Fan Layout */}
+          <div className="hidden lg:block relative h-[600px] group cursor-pointer mt-12">
+            {/* Back layer - NaturalLanguageInput (tilted right) */}
+            <div
+              className="absolute top-0 w-full transition-all duration-150 ease-out
+                         rotate-[10deg] translate-x-[2%]
+                         group-hover:rotate-0 group-hover:translate-x-0 group-hover:top-8"
+              style={{ zIndex: 1 }}
+            >
+              <NaturalLanguageInput />
+            </div>
 
-              {/* Progress */}
-              <div className="bg-slate-50 rounded-xl p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <p className="text-sm text-slate-500">費用消化</p>
-                  <p className="text-sm font-medium text-slate-900">82%</p>
-                </div>
-                <div className="w-full bg-slate-200 rounded-full h-2">
-                  <div
-                    className="bg-sky-500 h-2 rounded-full"
-                    style={{ width: "82%" }}
-                  ></div>
-                </div>
-              </div>
+            {/* Middle layer - SlackNotification (straight - center) */}
+            <div
+              className="absolute top-24 w-full transition-all duration-150 ease-out
+                         group-hover:scale-97"
+              style={{ zIndex: 2 }}
+            >
+              <SlackNotification />
+            </div>
 
-              {/* Notification preview */}
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
-                <Bell className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-medium text-amber-800">異常検知</p>
-                  <p className="text-sm text-amber-700">
-                    Meta広告のCPAが20%上昇しています
-                  </p>
-                </div>
-              </div>
-
-              {/* AI suggestion */}
-              <div className="border border-slate-200 rounded-xl p-4 flex items-start gap-3">
-                <MessageSquare className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-medium text-slate-900">AI提案</p>
-                  <p className="text-sm text-slate-600">
-                    効率の悪いクリエイティブを停止することを推奨します
-                  </p>
-                </div>
-              </div>
+            {/* Front layer - Dashboard (tilted left) */}
+            <div
+              className="absolute top-64 w-full transition-all duration-150 ease-out
+                         -rotate-[8deg] translate-x-1
+                         shadow-2xl shadow-slate-300/50
+                         group-hover:rotate-0 group-hover:translate-x-0 group-hover:top-50 group-hover:scale-95 group-hover:shadow-xl"
+              style={{ zIndex: 3 }}
+            >
+              <Dashboard />
             </div>
 
             {/* Decorative elements */}

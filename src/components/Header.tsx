@@ -72,28 +72,32 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-200">
-          <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left text-slate-600 hover:text-slate-900 font-medium py-2 transition-colors"
-              >
-                {link.label}
-              </button>
-            ))}
-            <hr className="border-slate-200" />
+      <div
+        className={`md:hidden bg-white border-t border-slate-200 overflow-hidden transition-all duration-300 ease-out ${
+          mobileMenuOpen
+            ? "max-h-80 opacity-100"
+            : "max-h-0 opacity-0 border-t-transparent"
+        }`}
+      >
+        <div className="px-4 py-4 space-y-3">
+          {navLinks.map((link) => (
             <button
-              onClick={scrollToForm}
-              className="w-full bg-sky-500 hover:bg-sky-600 text-white px-4 py-3 rounded-lg font-medium transition-colors"
+              key={link.href}
+              onClick={() => scrollToSection(link.href)}
+              className="block w-full text-left text-slate-600 hover:text-slate-900 font-medium py-2 transition-colors"
             >
-              無料で先行登録
+              {link.label}
             </button>
-          </div>
+          ))}
+          <hr className="border-slate-200" />
+          <button
+            onClick={scrollToForm}
+            className="w-full bg-sky-500 hover:bg-sky-600 text-white px-4 py-3 rounded-lg font-medium transition-colors"
+          >
+            無料で先行登録
+          </button>
         </div>
-      )}
+      </div>
     </header>
   );
 }

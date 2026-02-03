@@ -47,11 +47,11 @@ export default function Problems() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="relative bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-slate-200 transition-colors overflow-hidden"
+              className="relative bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-slate-200 transition-colors overflow-hidden h-full"
             >
               {/* 背景挿絵 */}
               <div className="absolute inset-0">
@@ -65,15 +65,15 @@ export default function Problems() {
               {/* オーバーレイ */}
               <div className="absolute inset-0 bg-slate-50/80" />
               {/* コンテンツ */}
-              <div className="relative z-10">
+              <div className="relative z-10 h-full flex flex-col">
                 <div className="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
                   <problem.icon className="w-7 h-7 text-red-500" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[56px] flex items-center">
                   {problem.title}
                 </h3>
-                <p className="text-slate-600 mb-4">{problem.description}</p>
-                <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-medium">
+                <p className="text-slate-600 mb-4 flex-1">{problem.description}</p>
+                <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-medium w-fit">
                   {problem.highlight}
                 </div>
               </div>

@@ -69,21 +69,29 @@ h1, h2, h3 {
   color: #0284C7;
   border: 2px solid #0EA5E9;
   border-radius: 0.75rem;
-  transition: background-color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+  will-change: transform;
 }
 
 .cta-button-square {
   background: #FFFFFF;
   color: #0284C7;
   border: 2px solid #0EA5E9;
-  transition: background-color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+  will-change: transform;
 }
 
 @media (hover: hover) {
   .cta-button:hover,
   .cta-button-square:hover {
-    background: #F0F9FF;
+    background: #0EA5E9;
+    color: #FFFFFF;
   }
+}
+
+.cta-button:active,
+.cta-button-square:active {
+  transform: scale(0.97);
 }
 
 /* Smooth scroll */
@@ -116,4 +124,44 @@ html {
 .decorative {
   pointer-events: none;
   user-select: none;
+}
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Marquee infinite scroll animation */
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-marquee > * {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
 }
