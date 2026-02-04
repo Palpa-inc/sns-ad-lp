@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarCheck2, ChevronRight, ShieldCheck } from "lucide-react";
+import { ChevronRight, ShieldCheck, Sparkles } from "lucide-react";
 import Dashboard from "./MockUI/Dashboard";
 import SlackNotification from "./MockUI/SlackNotification";
 import NaturalLanguageInput from "./MockUI/NaturalLanguageInput";
@@ -28,25 +28,22 @@ export default function Hero() {
           {/* Left: Copy */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-medium">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-600"></span>
-              </span>
-              先行登録受付中
+              <Sparkles className="w-4 h-4" />
+              専門知識ゼロで、プロの成果を。
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-              代理店品質を、
+              SNS広告運用は、もう
               <br />
-              <span className="text-sky-500">代理店価格の1/4で。</span>
+              <span className="text-sky-500">「AIに話しかけるだけ」。</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl">
-              24時間リアルタイム監視、異常検知、最適化提案。
+              複雑な管理画面や専門知識は不要。
               <br />
-              代理店に頼んでいた業務を、
-              <span className="font-semibold text-slate-900">月額3万円</span>
-              から。
+              あなたの「こうしたい」を伝えるだけで、AIが
+              <span className="font-semibold text-slate-900">代理店トップレベル</span>
+              の運用・最適化を実行します。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -54,7 +51,7 @@ export default function Hero() {
                 onClick={scrollToForm}
                 className="cta-button-square px-8 py-4 font-semibold text-lg flex items-center justify-center gap-2 transition-colors"
               >
-                無料で先行登録する
+                AIによる「自動運用」を無料で体験する
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
@@ -62,11 +59,11 @@ export default function Hero() {
             <div className="flex items-center gap-8 text-sm text-slate-500">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-emerald-500" />
-                クレジットカード不要
+                難しい設定は一切不要
               </div>
               <div className="flex items-center gap-2">
-                <CalendarCheck2 className="w-5 h-5 text-emerald-500" />
-                いつでもキャンセル可能
+                <ShieldCheck className="w-5 h-5 text-emerald-500" />
+                既存アカウントを連携するだけ
               </div>
             </div>
           </div>

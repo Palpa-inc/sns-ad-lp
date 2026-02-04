@@ -1,36 +1,36 @@
 "use client";
 
 import Image from "next/image";
-import { Check, Clock, PiggyBank, Zap } from "lucide-react";
+import { Check, MessageSquare, Brain, Zap } from "lucide-react";
 
 const features = [
   {
-    icon: PiggyBank,
-    title: "代理店の1/4のコスト",
+    icon: MessageSquare,
+    title: "自然言語で操作、専門知識ゼロ",
     description:
-      "月額広告費100万円なら、代理店は月20万円。本サービスは月3万円から。",
-    stat: "最大85%",
-    statLabel: "コスト削減",
+      "「CPAを下げて」「20代向けの配信を強めて」。チャット感覚で指示を送れば、AIが最適な設定に即座に反映します。",
+    stat: "専門知識",
+    statLabel: "不要",
     color: "sky",
     image: "/images/feature-cost.png",
   },
   {
-    icon: Zap,
-    title: "リアルタイムで異常を検知",
+    icon: Brain,
+    title: "プロレベルの最適化をAIが実行",
     description:
-      "CPAの急騰、予算の急消化を即座にキャッチ。代理店の「翌営業日対応」を待つ必要なし。",
-    stat: "数分",
-    statLabel: "検知から通知まで",
+      "数万件の運用データを持つAIが、あなたの代わりに24時間365日ABテストと予算配分を実施。代理店トップレベルのパフォーマンスを実現します。",
+    stat: "24時間365日",
+    statLabel: "自動最適化",
     color: "amber",
     image: "/images/feature-alert.png",
   },
   {
-    icon: Clock,
-    title: "面倒な作業から解放",
+    icon: Zap,
+    title: "アカウント連携だけで即スタート",
     description:
-      "レポート作成、数値チェック、設定変更。時間のかかる作業をAIがサポート。",
-    stat: "週15時間→2時間",
-    statLabel: "作業時間削減",
+      "面倒な初期設定や学習期間は不要。既存の広告アカウントを連携するだけで、AIが即座に分析・運用を開始します。",
+    stat: "最短5分",
+    statLabel: "で運用開始",
     color: "emerald",
     image: "/images/feature-time.png",
   },
@@ -38,34 +38,34 @@ const features = [
 
 const comparison = [
   {
-    item: "月額コスト",
-    agency: "広告費の20%",
-    tool: "広告費の5%",
-    us: "月額3万円〜",
-  },
-  {
-    item: "対応速度",
-    agency: "翌営業日",
-    tool: "ダッシュボード確認が必要",
-    us: "リアルタイム通知",
+    item: "専門知識",
+    agency: "不要（代理店に依頼）",
+    tool: "必要（自分で操作）",
+    us: "不要（AIに話すだけ）",
   },
   {
     item: "操作方法",
     agency: "メール・電話で依頼",
-    tool: "管理画面を操作",
-    us: "自然言語で指示",
+    tool: "複雑な管理画面を操作",
+    us: "チャットで自然言語指示",
   },
   {
-    item: "レポート",
-    agency: "週1回PDF",
-    tool: "自分で出力",
-    us: "自動生成・いつでも確認",
+    item: "最適化",
+    agency: "担当者の経験に依存",
+    tool: "自分で分析・判断",
+    us: "AIが自動でABテスト・最適化",
   },
   {
-    item: "設定変更",
-    agency: "依頼→確認→実行",
-    tool: "自分で設定",
-    us: "AIが提案→承認で実行",
+    item: "対応速度",
+    agency: "翌営業日",
+    tool: "自分で気づく必要あり",
+    us: "24時間365日リアルタイム",
+  },
+  {
+    item: "導入の手軽さ",
+    agency: "契約・打ち合わせが必要",
+    tool: "初期設定に時間がかかる",
+    us: "アカウント連携だけで即開始",
   },
 ];
 
@@ -75,12 +75,12 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            選ばれる3つの理由
+            簡単なのに、中身は<span className="text-sky-500">プロ品質</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            代理店でもなく、単なるツールでもない。
+            誰でも使えるシンプルさと、代理店トップレベルの運用力。
             <br />
-            AIパートナーとして、あなたの広告運用をサポートします。
+            AIだからこそ実現できる、新しい広告運用のかたちです。
           </p>
         </div>
 

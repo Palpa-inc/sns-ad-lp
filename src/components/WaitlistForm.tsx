@@ -202,7 +202,7 @@ export default function WaitlistForm() {
                   </>
                 ) : (
                   <>
-                    無料で先行登録する
+                    AIによる「自動運用」を無料で体験する
                     <ChevronRight className="w-5 h-5" />
                   </>
                 )}
@@ -210,7 +210,7 @@ export default function WaitlistForm() {
             </div>
 
             <p className="text-center text-sm text-slate-500 mt-6">
-              ご登録いただいた情報は、サービスのご案内以外には使用しません。
+              ※難しい設定は不要。既存のアカウントを連携するだけでスタートできます。
             </p>
           </form>
         </div>

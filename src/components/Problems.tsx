@@ -1,31 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import { Banknote, Clock, Laptop } from "lucide-react";
+import { LayoutGrid, CircleHelp, SlidersHorizontal } from "lucide-react";
 
 const problems = [
   {
-    icon: Banknote,
-    title: "代理店への依頼、高くないですか？",
+    icon: LayoutGrid,
+    title: "管理画面が複雑すぎる",
     description:
-      "月額広告費の20%。100万円の運用で毎月20万円の手数料。",
-    highlight: "年間240万円",
+      "Meta、Google、TikTok... 媒体ごとに異なる仕様や指標を覚えるだけで手一杯になっていませんか？",
+    highlight: "複雑すぎる操作",
     image: "/images/problem-cost.png",
   },
   {
-    icon: Clock,
-    title: "代理店の対応、遅くないですか？",
+    icon: CircleHelp,
+    title: "正解がわからず、手探り状態",
     description:
-      "「確認して折り返します」から翌営業日。その間にCPAは上がり続ける。",
-    highlight: "機会損失",
+      "「何が悪いのか」「次はどうすべきか」。プロの知見がないまま運用し、成果が伸び悩んでいませんか？",
+    highlight: "知見不足",
     image: "/images/problem-slow.png",
   },
   {
-    icon: Laptop,
-    title: "自社運用、大変すぎませんか？",
+    icon: SlidersHorizontal,
+    title: "設定作業に追われる日々",
     description:
-      "3つの管理画面を行き来して、週15時間。本来の業務ができない。",
-    highlight: "週15時間",
+      "クリエイティブの入稿や予算調整。煩雑な作業に時間を取られ、本来の戦略を考える時間がありません。",
+    highlight: "戦略に集中できない",
     image: "/images/problem-overwork.png",
   },
 ];
@@ -36,13 +36,13 @@ export default function Problems() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            広告運用、こんな状況になっていませんか？
+            広告運用、こんな「壁」を感じていませんか？
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            代理店に任せると高い。自分でやると時間がかかる。
+            管理画面の複雑さ、専門知識の壁、終わらない作業…
             <br />
             <span className="font-semibold text-sky-600">
-              その課題、AIで解決できます。
+              その「難しさ」、AIがすべて引き受けます。
             </span>
           </p>
         </div>
@@ -66,14 +66,14 @@ export default function Problems() {
               <div className="absolute inset-0 bg-slate-50/80" />
               {/* コンテンツ */}
               <div className="relative z-10 h-full flex flex-col">
-                <div className="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                  <problem.icon className="w-7 h-7 text-red-500" />
+                <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                  <problem.icon className="w-7 h-7 text-amber-600" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[56px] flex items-center">
                   {problem.title}
                 </h3>
                 <p className="text-slate-600 mb-4 flex-1">{problem.description}</p>
-                <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-medium w-fit">
+                <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm font-medium w-fit">
                   {problem.highlight}
                 </div>
               </div>

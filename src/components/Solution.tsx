@@ -4,38 +4,38 @@ import { ChevronRight, Check, X } from "lucide-react";
 
 const comparisons = [
   {
-    axis: "コスト",
-    agency: "広告費の20%（100万円で月20万円）",
-    us: "月額3万円〜（最大85%削減）",
+    axis: "操作方法",
+    agency: "専門スタッフが管理画面を操作",
+    us: "チャットで指示するだけ",
   },
   {
-    axis: "対応速度",
-    agency: "依頼→翌営業日",
-    us: "リアルタイムで異常検知・通知",
+    axis: "最適化",
+    agency: "担当者の経験と勘",
+    us: "AIが24時間365日データ分析・自動最適化",
   },
   {
-    axis: "レポート",
-    agency: "週1回のPDF",
-    us: "いつでも最新データを確認",
+    axis: "専門知識",
+    agency: "不要（代理店に丸投げ）",
+    us: "不要（AIが判断・実行）",
   },
 ];
 
 const beforeAfter = [
   {
-    before: "代理店への手数料、月20万円",
-    after: "月額3万円で同等以上の運用品質",
+    before: "管理画面を開いて複雑な設定を操作",
+    after: "「CPAを下げて」とチャットで指示するだけ",
   },
   {
-    before: "「確認します」から翌日対応",
-    after: "異常発生から数分でSlack通知",
+    before: "何が悪いのか分析に時間がかかる",
+    after: "AIが原因を特定し改善案を即座に提案",
   },
   {
-    before: "毎週2時間かけてレポート作成",
-    after: "ワンクリックで自動生成",
+    before: "ABテストの設計・実行を手動で管理",
+    after: "AIが自動でABテスト・予算配分を実施",
   },
   {
-    before: "設定変更の度にメールでやり取り",
-    after: "自然言語で指示、即時反映",
+    before: "媒体ごとの仕様を覚える必要がある",
+    after: "媒体の違いはAIが吸収、あなたは目標を伝えるだけ",
   },
 ];
 
@@ -45,14 +45,12 @@ export default function Solution() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            代理店より<span className="text-sky-500">速く</span>、
-            <span className="text-sky-500">安く</span>、
-            <span className="text-sky-500">ラクに</span>
+            <span className="text-sky-500">「指示するだけ」</span>で、あとはAIにお任せ。
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            AIが24時間体制であなたの広告を監視・最適化。
+            「CPAを下げて」「20代向けの配信を強めて」。チャット感覚で指示を送れば、
             <br />
-            代理店への依頼が必要だった業務を自動化します。
+            AIが最適な設定に即座に反映します。
           </p>
         </div>
 
