@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ChevronRight, ShieldCheck } from "lucide-react";
 import Dashboard from "./MockUI/Dashboard";
 import SlackNotification from "./MockUI/SlackNotification";
 import NaturalLanguageInput from "./MockUI/NaturalLanguageInput";
@@ -28,8 +28,11 @@ export default function Hero() {
           {/* Left: Copy */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-medium">
-              <Sparkles className="w-4 h-4" />
-              専門知識ゼロで、プロの成果を。
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-600"></span>
+              </span>
+              先行登録受付中
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
