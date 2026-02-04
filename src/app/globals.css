@@ -198,3 +198,43 @@ html {
 .ai-loading-dots span:nth-child(3) {
   animation-delay: 0.24s;
 }
+
+.legal-content {
+  color: var(--text-primary);
+  line-height: 1.9;
+  word-break: break-word;
+}
+
+.legal-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.legal-content p {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal-content ol,
+.legal-content ul {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1.25rem;
+}
+
+.legal-content ol {
+  list-style: decimal;
+}
+
+.legal-content ul {
+  list-style: disc;
+}
+
+.legal-content li {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
