@@ -51,7 +51,7 @@ export default function Hero() {
                 onClick={scrollToForm}
                 className="cta-button-square px-8 py-4 font-semibold text-lg flex items-center justify-center gap-2 transition-colors"
               >
-                AIによる「自動運用」を無料で体験する
+                無料で先行登録する
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
