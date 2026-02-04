@@ -71,15 +71,14 @@ const comparison = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 bg-slate-50">
+    <section id="features" className="scroll-mt-24 py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            簡単なのに、中身は<span className="text-sky-500">プロ品質</span>
+            簡単なのに中身は<span className="text-sky-500">プロ品質</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             誰でも使えるシンプルさと、代理店トップレベルの運用力。
-            <br />
             AIだからこそ実現できる、新しい広告運用のかたちです。
           </p>
         </div>
@@ -109,8 +108,8 @@ export default function Features() {
                     feature.color === "sky"
                       ? "bg-sky-100"
                       : feature.color === "amber"
-                      ? "bg-amber-100"
-                      : "bg-emerald-100"
+                        ? "bg-amber-100"
+                        : "bg-emerald-100"
                   }`}
                 >
                   <feature.icon
@@ -118,22 +117,24 @@ export default function Features() {
                       feature.color === "sky"
                         ? "text-sky-600"
                         : feature.color === "amber"
-                        ? "text-amber-600"
-                        : "text-emerald-600"
+                          ? "text-amber-600"
+                          : "text-emerald-600"
                     }`}
                   />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[56px] flex items-center">
                   {feature.title}
                 </h3>
-                <p className="text-slate-600 mb-6 flex-1">{feature.description}</p>
+                <p className="text-slate-600 mb-6 flex-1">
+                  {feature.description}
+                </p>
                 <div
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold w-fit ${
                     feature.color === "sky"
                       ? "bg-sky-50 text-sky-700"
                       : feature.color === "amber"
-                      ? "bg-amber-50 text-amber-700"
-                      : "bg-emerald-50 text-emerald-700"
+                        ? "bg-amber-50 text-amber-700"
+                        : "bg-emerald-50 text-emerald-700"
                   }`}
                 >
                   <span className="text-lg">{feature.stat}</span>
@@ -147,22 +148,25 @@ export default function Features() {
         {/* Comparison Table */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-slate-200">
-            <h3 className="text-xl font-bold text-slate-900">競合比較</h3>
+            <h3 className="text-xl font-bold text-slate-900">媒体別比較</h3>
           </div>
-          <div className="overflow-x-auto">
-            <table className="w-full">
+          <p className="px-6 pt-4 mb-4 text-xs text-slate-500 sm:hidden">
+            横にスクロールできます →
+          </p>
+          <div className="table-scroll overflow-x-scroll">
+            <table className="w-full min-w-[860px]">
               <thead>
                 <tr className="border-b border-slate-200 bg-slate-50">
-                  <th className="text-left p-4 text-slate-500 font-medium">
+                  <th className="whitespace-nowrap text-left p-4 text-slate-500 font-medium">
                     比較項目
                   </th>
-                  <th className="text-left p-4 text-slate-500 font-medium">
+                  <th className="whitespace-nowrap text-left p-4 text-slate-500 font-medium">
                     広告代理店
                   </th>
-                  <th className="text-left p-4 text-slate-500 font-medium">
+                  <th className="whitespace-nowrap text-left p-4 text-slate-500 font-medium">
                     運用自動化ツール
                   </th>
-                  <th className="text-left p-4 text-sky-600 font-bold bg-sky-50">
+                  <th className="whitespace-nowrap bg-sky-50 p-4 text-left text-sky-600 font-bold">
                     AdPilot AI
                   </th>
                 </tr>
@@ -173,10 +177,16 @@ export default function Features() {
                     key={index}
                     className="border-b border-slate-100 last:border-0"
                   >
-                    <td className="p-4 font-medium text-slate-900">{row.item}</td>
-                    <td className="p-4 text-slate-500">{row.agency}</td>
-                    <td className="p-4 text-slate-500">{row.tool}</td>
-                    <td className="p-4 bg-sky-50">
+                    <td className="whitespace-nowrap p-4 font-medium text-slate-900">
+                      {row.item}
+                    </td>
+                    <td className="whitespace-nowrap p-4 text-slate-500">
+                      {row.agency}
+                    </td>
+                    <td className="whitespace-nowrap p-4 text-slate-500">
+                      {row.tool}
+                    </td>
+                    <td className={`whitespace-nowrap bg-sky-50 p-4 `}>
                       <div className="flex items-center gap-2 text-sky-700 font-medium">
                         <Check className="w-4 h-4" />
                         {row.us}

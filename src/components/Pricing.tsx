@@ -8,7 +8,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="scroll-mt-24 py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
@@ -36,14 +36,16 @@ export default function Pricing() {
                 正式リリース時 50% OFF
               </p>
 
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <span className="text-2xl text-slate-400 line-through">
-                  ¥39,800
+              <div className="mb-2 flex flex-col items-center gap-2">
+                <span className="tabular-nums whitespace-nowrap text-xl text-slate-400 line-through sm:text-2xl">
+                  ¥39,800/月
                 </span>
-                <span className="text-5xl font-bold text-slate-900">
-                  ¥19,800
-                </span>
-                <span className="text-slate-500">/月</span>
+                <div className="flex items-end gap-2">
+                  <span className="tabular-nums whitespace-nowrap text-4xl leading-none font-bold text-slate-900 sm:text-5xl">
+                    ¥19,800
+                  </span>
+                  <span className="whitespace-nowrap text-slate-500">/月</span>
+                </div>
               </div>
 
               <p className="text-sm text-slate-500">

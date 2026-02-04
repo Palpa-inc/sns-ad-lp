@@ -41,11 +41,12 @@ const beforeAfter = [
 
 export default function Solution() {
   return (
-    <section className="py-20 bg-slate-50">
+    <section id="solution" className="scroll-mt-24 py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            <span className="text-sky-500">「指示するだけ」</span>で、あとはAIにお任せ。
+            <span className="text-sky-500">「指示するだけ」</span>
+            で、あとはAIにお任せ。
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             「CPAを下げて」「20代向けの配信を強めて」。チャット感覚で指示を送れば、
@@ -56,17 +57,20 @@ export default function Solution() {
 
         {/* Comparison Table */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-16">
-          <div className="overflow-x-auto">
-            <table className="w-full">
+          <p className="px-6 pt-4 mb-2 text-xs text-slate-500 sm:hidden">
+            横にスクロールできます →
+          </p>
+          <div className="table-scroll overflow-x-scroll">
+            <table className="w-full min-w-[680px]">
               <thead>
-                <tr className="border-b border-slate-200">
-                  <th className="text-left p-6 text-slate-500 font-medium">
+                <tr className="border-b border-slate-200 bg-slate-50">
+                  <th className="whitespace-nowrap text-left p-6 text-slate-500 font-medium">
                     比較軸
                   </th>
-                  <th className="text-left p-6 text-slate-500 font-medium">
+                  <th className="whitespace-nowrap text-left p-6 text-slate-500 font-medium">
                     広告代理店
                   </th>
-                  <th className="text-left p-6 text-sky-600 font-bold bg-sky-50">
+                  <th className="whitespace-nowrap bg-sky-50 p-6 text-left text-sky-600 font-bold">
                     AdPilot AI
                   </th>
                 </tr>
@@ -77,11 +81,15 @@ export default function Solution() {
                     key={index}
                     className="border-b border-slate-100 last:border-0"
                   >
-                    <td className="p-6 font-semibold text-slate-900">
+                    <td className="whitespace-nowrap p-6 font-semibold text-slate-900">
                       {row.axis}
                     </td>
-                    <td className="p-6 text-slate-600">{row.agency}</td>
-                    <td className="p-6 text-sky-700 font-medium bg-sky-50">
+                    <td className="whitespace-nowrap p-6 text-slate-600">
+                      {row.agency}
+                    </td>
+                    <td
+                      className={`whitespace-nowrap bg-sky-50 p-6 text-sky-700 font-medium `}
+                    >
                       {row.us}
                     </td>
                   </tr>

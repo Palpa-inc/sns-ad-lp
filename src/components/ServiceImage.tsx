@@ -6,11 +6,11 @@ import NaturalLanguageInput from "./MockUI/NaturalLanguageInput";
 
 export default function ServiceImage() {
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section id="service" className="scroll-mt-24 py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            サービスイメージ
+            サービス
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             直感的なダッシュボード、リアルタイム通知、
@@ -39,7 +39,10 @@ export default function ServiceImage() {
                   "リアルタイムでデータを更新",
                   "前週比で改善・悪化を可視化",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-700">
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-slate-700"
+                  >
                     <svg
                       className="w-5 h-5 text-sky-500 flex-shrink-0"
                       fill="currentColor"
@@ -83,7 +86,10 @@ export default function ServiceImage() {
                   "原因と推奨アクションを提示",
                   "ワンクリックで対応可能",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-700">
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-slate-700"
+                  >
                     <svg
                       className="w-5 h-5 text-amber-500 flex-shrink-0"
                       fill="currentColor"
@@ -121,7 +127,10 @@ export default function ServiceImage() {
                   "変更内容を確認してから実行",
                   "操作履歴も自動で記録",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-700">
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 text-slate-700"
+                  >
                     <svg
                       className="w-5 h-5 text-emerald-500 flex-shrink-0"
                       fill="currentColor"

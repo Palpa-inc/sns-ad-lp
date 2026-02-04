@@ -8,41 +8,38 @@ const problems = [
     icon: LayoutGrid,
     title: "管理画面が複雑すぎる",
     description:
-      "Meta、Google、TikTok... 媒体ごとに異なる仕様や指標を覚えるだけで手一杯になっていませんか？",
-    highlight: "複雑すぎる操作",
+      "Meta、Google、X, TikTok... 媒体ごとに異なる仕様や指標を覚えるだけで手一杯になっていませんか？",
     image: "/images/problem-cost.png",
   },
   {
     icon: CircleHelp,
     title: "正解がわからず、手探り状態",
     description:
-      "「何が悪いのか」「次はどうすべきか」。プロの知見がないまま運用し、成果が伸び悩んでいませんか？",
-    highlight: "知見不足",
+      "「何が悪いのか」「次はどうすべきか」。明確な答えが出ないまま場当たり的な運用をして、成果が伸び悩んでいませんか？",
     image: "/images/problem-slow.png",
   },
   {
     icon: SlidersHorizontal,
     title: "設定作業に追われる日々",
     description:
-      "クリエイティブの入稿や予算調整。煩雑な作業に時間を取られ、本来の戦略を考える時間がありません。",
-    highlight: "戦略に集中できない",
+      "クリエイティブの入稿や予算調整。煩雑な作業に時間を取られ、本質的な戦略やアイディアを考える時間を確保できていますか？",
     image: "/images/problem-overwork.png",
   },
 ];
 
 export default function Problems() {
   return (
-    <section className="py-20 bg-white">
+    <section id="problems" className="scroll-mt-24 py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            広告運用、こんな「壁」を感じていませんか？
+            SNS広告運用、こんな「壁」を感じていませんか？
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            管理画面の複雑さ、専門知識の壁、終わらない作業…
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto flex flex-col gap-3">
+            理解できない複雑な管理画面、キャンペーン・広告グループなど専門知識の壁、設定した項目って本当に妥当で効果が出るのか...
             <br />
-            <span className="font-semibold text-sky-600">
-              その「難しさ」、AIがすべて引き受けます。
+            <span className="font-semibold text-sky-600 -mx-2">
+              その「難しさ」と「不安」すべて引き受けます。
             </span>
           </p>
         </div>
@@ -72,10 +69,9 @@ export default function Problems() {
                 <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[56px] flex items-center">
                   {problem.title}
                 </h3>
-                <p className="text-slate-600 mb-4 flex-1">{problem.description}</p>
-                <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm font-medium w-fit">
-                  {problem.highlight}
-                </div>
+                <p className="text-slate-600 mb-4 flex-1">
+                  {problem.description}
+                </p>
               </div>
             </div>
           ))}

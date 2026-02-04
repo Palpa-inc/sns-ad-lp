@@ -6,6 +6,7 @@ interface WaitlistData {
   name?: string;
   adBudget?: string;
   currentSetup?: string;
+  note?: string;
 }
 
 export async function POST(request: NextRequest) {
@@ -40,6 +41,7 @@ export async function POST(request: NextRequest) {
       name: data.name || "N/A",
       adBudget: data.adBudget || "N/A",
       currentSetup: data.currentSetup || "N/A",
+      note: data.note || "N/A",
       timestamp: new Date().toISOString(),
     });
 

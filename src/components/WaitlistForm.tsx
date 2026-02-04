@@ -13,6 +13,7 @@ export default function WaitlistForm() {
     name: "",
     adBudget: "",
     currentSetup: "",
+    note: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,7 +42,9 @@ export default function WaitlistForm() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -50,10 +53,10 @@ export default function WaitlistForm() {
   };
 
   return (
-    <section id="waitlist" className="py-20 bg-white">
+    <section id="waitlist" className="scroll-mt-24 py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
               まずは先行登録から
             </h2>
@@ -61,16 +64,16 @@ export default function WaitlistForm() {
               正式リリース時に優先的にご案内します。
               <br />
               <span className="text-sky-600 font-semibold">
-                先行登録特典: 50% OFF
+                50%OFFの先行登録枠を確保する
               </span>
             </p>
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="bg-slate-50 rounded-2xl p-8 border border-slate-200"
+            className="bg-slate-50 rounded-2xl p-8 px-5 border border-slate-200"
           >
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Email */}
               <div>
                 <label
@@ -189,6 +192,25 @@ export default function WaitlistForm() {
                 </div>
               </div>
 
+              {/* Note */}
+              <div>
+                <label
+                  htmlFor="note"
+                  className="block text-sm font-medium text-slate-700 mb-2"
+                >
+                  自由記入欄
+                </label>
+                <textarea
+                  id="note"
+                  name="note"
+                  value={formData.note}
+                  onChange={handleChange}
+                  rows={4}
+                  placeholder="ご質問・ご要望・利用イメージなどをご記入ください"
+                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent resize-y"
+                />
+              </div>
+
               {/* Submit */}
               <button
                 type="submit"
@@ -202,16 +224,16 @@ export default function WaitlistForm() {
                   </>
                 ) : (
                   <>
-                    AIによる「自動運用」を無料で体験する
+                    無料で先行登録する
                     <ChevronRight className="w-5 h-5" />
                   </>
                 )}
               </button>
             </div>
 
-            <p className="text-center text-sm text-slate-500 mt-6">
+            {/*<p className="text-center text-sm text-slate-500 mt-6">
               ※難しい設定は不要。既存のアカウントを連携するだけでスタートできます。
-            </p>
+            </p>*/}
           </form>
         </div>
       </div>
