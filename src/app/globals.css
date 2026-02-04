@@ -136,6 +136,25 @@ html {
   display: none;
 }
 
+/* Always-visible horizontal scrollbar for comparison tables */
+.table-scroll {
+  scrollbar-gutter: stable;
+  scrollbar-width: auto;
+}
+
+.table-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+
 /* Marquee infinite scroll animation */
 @keyframes marquee {
   from {

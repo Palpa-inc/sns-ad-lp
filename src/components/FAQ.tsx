@@ -26,8 +26,7 @@ const faqs = [
   },
   {
     question: "解約はいつでもできますか？",
-    answer:
-      "はい、月単位でいつでも解約可能です。縛り期間はありません。",
+    answer: "はい、月単位でいつでも解約可能です。縛り期間はありません。",
   },
 ];
 
@@ -35,9 +34,9 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 bg-slate-50">
+    <section id="faq" className="scroll-mt-24 py-20 bg-slate-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
             よくあるご質問
           </h2>
@@ -74,7 +73,9 @@ export default function FAQ() {
                 }}
               >
                 <div className="overflow-hidden">
-                  <div className="px-6 pt-3 pb-5 text-slate-600">{faq.answer}</div>
+                  <div className="px-6 pt-3 pb-5 text-slate-600">
+                    {faq.answer}
+                  </div>
                 </div>
               </div>
             </div>

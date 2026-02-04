@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BarChart3, Menu, X } from "lucide-react";
 
 const navLinks = [
+  { label: "サービス", href: "#service" },
   { label: "機能", href: "#features" },
   { label: "料金", href: "#pricing" },
   { label: "よくある質問", href: "#faq" },
@@ -36,8 +37,8 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation & CTA */}
-          <div className="hidden md:flex items-center gap-8">
-            <nav className="flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-8">
+            <nav className="flex items-center gap-4 lg:gap-7">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
@@ -50,7 +51,7 @@ export default function Header() {
             </nav>
             <button
               onClick={scrollToForm}
-              className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-2.5 rounded-lg font-medium transition-colors"
+              className="bg-sky-500 hover:bg-sky-600 text-white px-4 lg:px-6 py-2.5 rounded-lg font-medium transition-colors"
             >
               無料で先行登録
             </button>
@@ -75,7 +76,7 @@ export default function Header() {
       <div
         className={`md:hidden bg-white border-t border-slate-200 overflow-hidden transition-all duration-300 ease-out ${
           mobileMenuOpen
-            ? "max-h-80 opacity-100"
+            ? "max-h-96 opacity-100"
             : "max-h-0 opacity-0 border-t-transparent"
         }`}
       >
