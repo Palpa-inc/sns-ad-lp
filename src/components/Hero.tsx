@@ -22,9 +22,9 @@ export default function Hero() {
         }}
       />
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/75 via-white/50 to-white/30" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 sm:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/80 via-white/60 to-white/50" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-4 items-center">
           {/* Left: Copy */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-medium">
@@ -36,17 +36,19 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-              SNS広告運用は、もう
+              SNS広告運用を、
               <br />
-              <span className="text-sky-500">「AIに話しかけるだけ」。</span>
+              <span className="text-sky-500">もっとスマートに。</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl">
-              複雑な管理画面や専門知識は不要。
+              複雑な管理画面や業界の専門知識はもう不要。
               <br />
               あなたの「こうしたい」を伝えるだけで、AIが
-              <span className="font-semibold text-slate-900">代理店トップレベル</span>
-              の運用・最適化を実行します。
+              <span className="font-semibold text-slate-900">
+                代理店トップ水準
+              </span>
+              の運用・最適化を実現します。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -59,12 +61,12 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className="flex items-center gap-8 text-sm text-slate-500">
-              <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center sm:justify-start gap-4 sm:gap-8 w-full text-sm text-slate-500">
+              <div className="flex items-center gap-1">
                 <ShieldCheck className="w-5 h-5 text-emerald-500" />
-                難しい設定は一切不要
+                難しい設定一切不要
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <ShieldCheck className="w-5 h-5 text-emerald-500" />
                 既存アカウントを連携するだけ
               </div>
@@ -73,8 +75,8 @@ export default function Hero() {
 
           {/* Right: MockUI Preview */}
           {/* Mobile: Marquee infinite scroll */}
-          <div className="lg:hidden -mx-4 pb-8 overflow-hidden">
-            <div className="h-[520px]">
+          <div className="lg:hidden -mx-4 pt-8 overflow-hidden">
+            <div className="h-fit">
               <div className="h-full flex items-start animate-marquee gap-6 px-4">
                 {/* First set */}
                 <div className="flex-shrink-0 w-[84vw] max-w-[340px] origin-top scale-[0.92]">
