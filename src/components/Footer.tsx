@@ -1,4 +1,4 @@
-"use client";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -15,12 +15,15 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link href="/terms" className="hover:text-white transition-colors">
               利用規約
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="hover:text-white transition-colors"
+            >
               プライバシーポリシー
-            </a>
+            </Link>
             <a href="#" className="hover:text-white transition-colors">
               特定商取引法に基づく表記
             </a>
