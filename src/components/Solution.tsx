@@ -71,7 +71,7 @@ export default function Solution() {
                     広告代理店
                   </th>
                   <th className="whitespace-nowrap bg-sky-50 p-6 text-left text-sky-600 font-bold">
-                    AdPilot AI
+                    ラクアド
                   </th>
                 </tr>
               </thead>

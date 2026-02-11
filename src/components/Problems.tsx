@@ -10,6 +10,7 @@ const problems = [
     description:
       "Meta、Google、X, TikTok... 媒体ごとに異なる仕様や指標を覚えるだけで手一杯になっていませんか？",
     image: "/images/problem-cost.png",
+    imageAlt: "複雑な広告管理画面に悩むイメージ",
   },
   {
     icon: CircleHelp,
@@ -17,6 +18,7 @@ const problems = [
     description:
       "「何が悪いのか」「次はどうすべきか」。明確な答えが出ないまま場当たり的な運用をして、成果が伸び悩んでいませんか？",
     image: "/images/problem-slow.png",
+    imageAlt: "広告運用の正解がわからず手探りで悩むイメージ",
   },
   {
     icon: SlidersHorizontal,
@@ -24,6 +26,7 @@ const problems = [
     description:
       "クリエイティブの入稿や予算調整。煩雑な作業に時間を取られ、本質的な戦略やアイディアを考える時間を確保できていますか？",
     image: "/images/problem-overwork.png",
+    imageAlt: "煩雑な広告設定作業に追われるイメージ",
   },
 ];
 
@@ -54,7 +57,7 @@ export default function Problems() {
               <div className="absolute inset-0">
                 <Image
                   src={problem.image}
-                  alt=""
+                  alt={problem.imageAlt}
                   fill
                   className="object-cover"
                 />

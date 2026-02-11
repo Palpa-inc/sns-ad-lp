@@ -198,7 +198,7 @@ export default function NaturalLanguageInput() {
               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-md overflow-hidden bg-white/90 ring-1 ring-white/80 shadow-sm">
                 <Image
                   src="/images/chatbot.gif"
-                  alt="AdPilot AI"
+                  alt="ラクアド"
                   width={24}
                   height={24}
                   unoptimized
@@ -208,7 +208,7 @@ export default function NaturalLanguageInput() {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="font-medium text-slate-900 text-sm sm:text-base">AdPilot AI</span>
+                <span className="font-medium text-slate-900 text-sm sm:text-base">ラクアド</span>
                 <Sparkles
                   className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${displayedScenario.botIconClass}`}
                 />

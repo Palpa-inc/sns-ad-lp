@@ -13,6 +13,7 @@ const features = [
     statLabel: "不要",
     color: "sky",
     image: "/images/feature-cost.png",
+    imageAlt: "自然言語でSNS広告運用を操作するイメージ",
   },
   {
     icon: Brain,
@@ -23,6 +24,7 @@ const features = [
     statLabel: "自動最適化",
     color: "amber",
     image: "/images/feature-alert.png",
+    imageAlt: "AIが24時間自動で広告を最適化するイメージ",
   },
   {
     icon: Zap,
@@ -33,6 +35,7 @@ const features = [
     statLabel: "で運用開始",
     color: "emerald",
     image: "/images/feature-time.png",
+    imageAlt: "最短5分でアカウント連携し広告運用を開始するイメージ",
   },
 ];
 
@@ -94,7 +97,7 @@ export default function Features() {
               <div className="absolute inset-0">
                 <Image
                   src={feature.image}
-                  alt=""
+                  alt={feature.imageAlt}
                   fill
                   className="object-cover"
                 />
@@ -167,7 +170,7 @@ export default function Features() {
                     運用自動化ツール
                   </th>
                   <th className="whitespace-nowrap bg-sky-50 p-4 text-left text-sky-600 font-bold">
-                    AdPilot AI
+                    ラクアド
                   </th>
                 </tr>
               </thead>

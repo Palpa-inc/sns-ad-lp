@@ -14,13 +14,13 @@ type LegalDocumentMeta = {
 const legalDocumentMap: Record<LegalDocumentId, LegalDocumentMeta> = {
   terms: {
     title: "利用規約",
-    description: "AdPilot AIの利用条件を定める規約です。",
+    description: "ラクアドの利用条件を定める規約です。",
     updatedAt: "2026年2月3日",
     fileName: "terms.md",
   },
   privacyPolicy: {
     title: "プライバシーポリシー",
-    description: "AdPilot AIにおける個人情報の取扱方針です。",
+    description: "ラクアドにおける個人情報の取扱方針です。",
     updatedAt: "2026年2月3日",
     fileName: "privacy-policy.md",
   },

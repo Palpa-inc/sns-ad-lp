@@ -5,7 +5,7 @@ import { getLegalDocumentMeta } from "@/lib/legal-documents";
 const privacyMeta = getLegalDocumentMeta("privacyPolicy");
 
 export const metadata: Metadata = {
-  title: `${privacyMeta.title} | AdPilot AI`,
+  title: `${privacyMeta.title} | ラクアド`,
   description: privacyMeta.description,
 };
 

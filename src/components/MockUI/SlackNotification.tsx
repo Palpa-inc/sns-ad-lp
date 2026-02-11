@@ -70,7 +70,7 @@ export default function SlackNotification() {
             <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md overflow-hidden bg-white/90 ring-1 ring-white/80 shadow-sm">
               <Image
                 src="/images/chatbot.gif"
-                alt="AdPilot AI"
+                alt="ラクアド"
                 width={28}
                 height={28}
                 unoptimized
@@ -80,7 +80,7 @@ export default function SlackNotification() {
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-              <span className="font-bold text-slate-900 text-sm sm:text-base">AdPilot AI</span>
+              <span className="font-bold text-slate-900 text-sm sm:text-base">ラクアド</span>
               <span className="bg-sky-100 text-sky-700 text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium">
                 APP
               </span>

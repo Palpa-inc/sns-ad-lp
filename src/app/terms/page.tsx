@@ -5,7 +5,7 @@ import { getLegalDocumentMeta } from "@/lib/legal-documents";
 const termsMeta = getLegalDocumentMeta("terms");
 
 export const metadata: Metadata = {
-  title: `${termsMeta.title} | AdPilot AI`,
+  title: `${termsMeta.title} | ラクアド`,
   description: termsMeta.description,
 };
 
